@@ -1,14 +1,17 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import UploadImg from "../../assets/main/upload.svg";
 
 function UploadSong() {
   const [files, setFiles] = useState([]);
-  const { getRootProps, getInputProps } = useDropzone({
-    accept: "audio/mp3",
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    accept: ".mp3",
+    maxFiles: 1,
+    maxSize: 30000000, // 30mb
+    minSize: 500000, // 0.5mb
     onDrop: (acceptedFiles) => {
       setFiles(
         acceptedFiles.map((file) =>
@@ -17,8 +20,7 @@ function UploadSong() {
           })
         )
       );
-    },
-    maxFiles: 1
+    }
   });
 
   const song = files.map((file) => (
