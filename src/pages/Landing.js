@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import music from "../assets/landing/undraw_music.svg";
-import TopBar from "../components/TopBar";
+import musicImg from "../assets/landing/undraw_music.svg";
+// import TopBar from "../components/TopBar";
 import Body from "../layouts/Body";
 
 function Landing() {
   return (
     <Body>
-      {/* top bar */}
-      <TopBar />
+      {/* top bar inserted via Body, go to layouts/Body/index.js */}
 
       {/* content */}
       <div className="grid grid-cols-2 h-full ">
@@ -39,7 +38,7 @@ function Landing() {
 
         {/* music listener img */}
         <div className="self-center">
-          <img src={music} alt="" />
+          <img src={musicImg} alt="" />
         </div>
       </div>
     </Body>
