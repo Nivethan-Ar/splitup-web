@@ -67,10 +67,14 @@ function UploadSong() {
       <div className="w-11/12 self-center">
         <img src={UploadImg} alt="" className=" " />
       </div>
-
       {/* upload side */}
-      <div className="bg-gradient-to-br from-[#ff5f96] to-blue-400 flex flex-col justify-center rounded-md w-11/12 h-2/5 py-12 px-4 text-white ">
-        {/* <div {...getRootProps({ className: "dropzone" })} className="flex flex-col ">
+
+      <div className="flex flex-col gap-6 w-11/12">
+        <div>
+          <h6 className="capitalize text-4xl font-semibold font-poppins"> upload song</h6>
+        </div>
+        <div className="bg-gradient-to-br from-[#ff5f96] to-blue-400 flex flex-col justify-center rounded-md w-11/12 h-2/5 py-12 px-4 text-white ">
+          {/* <div {...getRootProps({ className: "dropzone" })} className="flex flex-col ">
           <input {...getInputProps()} />
 
           <h3 className="text-white text-2xl uppercase text-center">
@@ -81,28 +85,36 @@ function UploadSong() {
             only accept 1 audio file, upto 20 minutes (0.5mb - 30mb){" "}
           </code>
         </div> */}
-        <form
-          action="http://127.0.0.1:5000/upload"
-          encType="multipart/form-data"
-          method="post"
-          onSubmit={handleOnSubmit}
-          className="flex flex-col gap-4 justify-center items-center mt-4">
-          <label
-            htmlFor="song"
-            className="p-4 w-full rounded-md bg-blue-500 font-semibold tracking-wide cursor-pointer text-lg">
-            Select A File
-            <input type="file" onChange={handleChange} name="song" id="song" className="hidden" />
-          </label>
-          <button
-            type="submit"
-            onClick={togglePopup}
-            className=" bg-blue-500 py-2 px-4 rounded-md w-40 font-semibold">
-            Upload
-          </button>
-        </form>
+          <form
+            action="http://127.0.0.1:5000/upload"
+            encType="multipart/form-data"
+            method="post"
+            onSubmit={handleOnSubmit}
+            className="flex flex-col gap-4 justify-center items-center mt-4">
+            <label
+              htmlFor="song"
+              className="p-4 w-full rounded-md bg-blue-500 font-semibold tracking-wide cursor-pointer text-lg shadow-md">
+              Select A File
+              <input
+                type="file"
+                accept="audio/mpeg3"
+                onChange={handleChange}
+                name="song"
+                id="song"
+                className="hidden"
+              />
+            </label>
+            <button
+              type="submit"
+              onClick={togglePopup}
+              className=" bg-blue-500 py-2 px-4 rounded-md w-40 font-semibold shadow-md">
+              Upload
+            </button>
+          </form>
 
-        {feedback && <Popup togglePopup={togglePopup} />}
-        <div>{}</div>
+          {feedback && <Popup togglePopup={togglePopup} />}
+          <div>{}</div>
+        </div>
       </div>
     </div>
   );
