@@ -90,7 +90,9 @@ function Home() {
             <button
               type="button"
               onClick={previousPage}
-              className="bg-blue-500 w-36 text-white hover:shadow-blue-500/60 shadow-lg font-semibold capitalize text-base px-4 py-2 mx-2 rounded-md">
+              className={` w-36 text-white ${
+                page === 1 ? "bg-gray-400" : "bg-blue-500 hover:shadow-blue-500/60"
+              }  shadow-lg font-semibold capitalize text-base px-4 py-2 mx-2 rounded-md`}>
               previous
             </button>
           )}
