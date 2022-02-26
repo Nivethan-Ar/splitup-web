@@ -12,6 +12,12 @@ import api from "../api/api";
 function Home() {
   const [page, setPage] = useState(1);
   const [amtData, setAmtData] = useState("");
+  const [timeSignature, setTimeSignature] = useState("");
+
+  const assignTimeSignature = (stringSignature) => {
+    setTimeSignature(stringSignature);
+    console.log("Time Signature: ", stringSignature);
+  };
 
   async function handleSubmit() {
     if (page === 3) return;
@@ -80,8 +86,8 @@ function Home() {
         {/* contents */}
         <div className="h-full">
           {page === 1 && <UploadSong />}
-          {page === 2 && <SelectInstrument />}
-          {page === 3 && <Result amtData={amtData} />}
+          {page === 2 && <SelectInstrument timeSignatureFunction={assignTimeSignature} />}
+          {page === 3 && <Result amtData={amtData} timeSignature={timeSignature} />}
         </div>
 
         {/* buttons */}
