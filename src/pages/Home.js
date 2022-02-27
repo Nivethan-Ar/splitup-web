@@ -91,7 +91,7 @@ function Home() {
         </div>
 
         {/* buttons */}
-        <div className="top-[74%] 2xl:top-[80%] w-full absolute">
+        <div className="top-[76%] 2xl:top-[80%] w-full absolute">
           {page !== 3 && (
             <button
               type="button"

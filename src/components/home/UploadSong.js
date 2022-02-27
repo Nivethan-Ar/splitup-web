@@ -75,7 +75,7 @@ function UploadSong() {
             upload a song
           </h6>
         </div>
-        <div className="backdrop-blur-md bg-white/5 border-4 flex flex-col justify-center rounded-xl w-11/12 h-3/5 py-12 px-4 text-white">
+        <div className="backdrop-blur-md bg-white/5 border-4 flex flex-col justify-center rounded-xl w-11/12 h-3/6 2xl:h-3/5 py-12 px-4 text-white">
           {/* <div {...getRootProps({ className: "dropzone" })} className="flex flex-col ">
           <input {...getInputProps()} />
 
