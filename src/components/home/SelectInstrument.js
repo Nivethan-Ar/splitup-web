@@ -21,7 +21,7 @@ function SelectInstrument(props) {
   return (
     <div className="grid grid-cols-2 h-4/5 place-items-center items-center justify-center">
       {/* select instrument side */}
-      <div className="bg-gradient-to-br from-[#ff5f96] to-blue-400 rounded-md py-12 px-4 text-black font-semibold cursor-pointer">
+      <div className="bg-gradient-to-br from-[#ff5f96] to-blue-400 rounded-md py-12 px-8 text-black font-semibold cursor-pointer">
         {/*  */}
         <h3 className=" text-white text-xl mb-4 uppercase text-center">
           Select An instrument to start the process
