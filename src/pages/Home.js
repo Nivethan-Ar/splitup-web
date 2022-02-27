@@ -71,7 +71,7 @@ function Home() {
     <Body>
       <div className="h-full relative text-center">
         {/* Progress Bar */}
-        <div className=" mt-4">
+        <div className="bg-white rounded-lg mt-4">
           <ProgressBar step={page} />
         </div>
         {/* <button

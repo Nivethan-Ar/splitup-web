@@ -5,9 +5,11 @@ import MusicLogo from "../assets/music.png";
 function TopBar() {
   return (
     <Link to="/">
-      <div className="flex items-center gap-2 border-b-2 border-opacity-10 pb-1 pt-4 border-gray-600 ">
-        <img src={MusicLogo} alt="page logo" className="w-10 animate-pulse" />
-        <h6 className="font-semibold text-2xl font-poppins ">SPLITUP</h6>
+      <div className="flex items-center gap-2 border-b-2 border-opacity-20 pb-3 pt-4 border-gray-400 ">
+        <img src={MusicLogo} alt="page logo" className="w-10 bg-white rounded-full animate-pulse" />
+        <h6 className="font-semibold text-3xl font-poppins text-white tracking-widest text-shadow-md ">
+          SPLITUP
+        </h6>
       </div>
     </Link>
   );
