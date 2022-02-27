@@ -137,21 +137,21 @@ function Result(props) {
       {/* <h1 className="result">{apostaphy}</h1> */}
       {amtData ? (
         <div className="h-96 overflow-y-scroll w-2/4 bg- p-4 rounded-md">
-          <pre>{getNotation()}</pre>
+          <pre className="result">{getNotation()}</pre>
         </div>
       ) : (
         <div className="h-96 w-2/4 flex flex-col items-center justify-center">
           <img src={LoadIcon} className="animate-spin w-20" alt="" />
         </div>
       )}
-      <button
+      {/* <button
         type="button"
         onClick={getNotation}
         className={`w-44 text-white
         ${amtData ? "bg-blue-500 hover:shadow-blue-500/60" : "bg-gray-400"}
         shadow-lg font-semibold capitalize text-base px-4 py-2 mx-2 rounded-md`}>
         Visualize Notation
-      </button>
+      </button> */}
 
       {/* MSS STEM RESULT   */}
       <audio src={url} controls />
