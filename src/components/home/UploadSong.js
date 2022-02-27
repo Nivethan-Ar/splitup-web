@@ -76,17 +76,6 @@ function UploadSong() {
           </h6>
         </div>
         <div className="backdrop-blur-md bg-white/5 border-4 flex flex-col justify-center rounded-xl w-11/12 h-3/6 2xl:h-3/5 py-12 px-4 text-white">
-          {/* <div {...getRootProps({ className: "dropzone" })} className="flex flex-col ">
-          <input {...getInputProps()} />
-
-          <h3 className="text-white text-2xl uppercase text-center">
-            Drag and drop a file here / click to select files
-          </h3>
-
-          <code className="text-xs text-center">
-            only accept 1 audio file, upto 20 minutes (0.5mb - 30mb){" "}
-          </code>
-        </div> */}
           <form
             action="http://127.0.0.1:5000/upload"
             encType="multipart/form-data"
@@ -110,15 +99,15 @@ function UploadSong() {
             <button
               type="submit"
               onClick={togglePopup}
-              className=" bg-blue-500 py-2 px-4 rounded-md w-40 font-semibold shadow-md">
+              className=" bg-blue-500 py-2 px-4 mt-2 rounded-md w-40 font-semibold shadow-md">
               Upload
             </button>
           </form>
 
-          {feedback && <Popup togglePopup={togglePopup} />}
           <div>{}</div>
         </div>
       </div>
+      {feedback && <Popup togglePopup={togglePopup} />}
     </div>
   );
 }

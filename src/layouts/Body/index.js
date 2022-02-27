@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import TopBar from "../../components/TopBar";
-import bgVideo from "../../assets/videos/bg5.mp4";
+import bgVideo from "../../assets/videos/bg1.mp4";
 
 function Body({ children }) {
   return (
