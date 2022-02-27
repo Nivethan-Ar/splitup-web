@@ -137,7 +137,7 @@ function Result(props) {
       {/* <h1 className="result">{apostaphy}</h1> */}
       {amtData ? (
         <div className="h-96 overflow-y-scroll w-2/4 bg- p-4 rounded-md">
-          <pre className="text-4xl">{getNotation()}</pre>
+          <pre className="">{getNotation()}</pre>
         </div>
       ) : (
         <div className="h-96 w-2/4 flex flex-col items-center justify-center">
