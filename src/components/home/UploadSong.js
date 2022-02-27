@@ -64,7 +64,7 @@ function UploadSong() {
   };
   return (
     <div className="grid grid-cols-2 h-4/5 place-items-center">
-      <div className="w-11/12 self-center">
+      <div className="w-9/12 self-center">
         <img src={UploadImg} alt="" className=" " />
       </div>
       {/* upload side */}
