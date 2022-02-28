@@ -88,7 +88,7 @@ function UploadSong() {
               Select A File
               <input
                 type="file"
-                accept="audio/mpeg3"
+                accept="audio/*"
                 onChange={handleChange}
                 name="song"
                 id="song"
