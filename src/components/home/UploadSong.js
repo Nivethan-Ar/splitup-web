@@ -105,9 +105,9 @@ function UploadSong() {
           </form>
 
           <div>{}</div>
+          {feedback && <Popup togglePopup={togglePopup} />}
         </div>
       </div>
-      {feedback && <Popup togglePopup={togglePopup} />}
     </div>
   );
 }

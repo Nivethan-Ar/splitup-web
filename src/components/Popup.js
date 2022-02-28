@@ -6,7 +6,7 @@ import React from "react";
 function Popup(props) {
   // const { togglePopup } = props;
   return (
-    <div className="absolute -top-36 left-[50%] border border-white/10 -translate-x-1/2 backdrop-blur-md w-[104%] rounded-xl bg-white/40 shadow-2xl animate-fade">
+    <div className="absolute -top-32 left-[50%] border border-white/10 -translate-x-1/2 backdrop-blur-md w-[102%] rounded-xl bg-white/40 shadow-2xl animate-fade">
       <div className="py-2 relative">
         <h6 className="text-white text-shadow-md text-xl tracking-wider font-semibold">
           🎉🥳 UPLOAD SUCCESSFULL 🥳 🎉
