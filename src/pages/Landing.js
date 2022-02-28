@@ -12,7 +12,7 @@ function Landing() {
 
       {/* content */}
       <div className="grid grid-cols-2 h-full ">
-        <div className="flex text-shadow-lg text-white gap-4 flex-col justify-center font-semibold capitalize h-full text-[2.6rem] leading-snug pl-10">
+        <div className="flex text-shadow-md text-white gap-4 flex-col justify-center font-semibold capitalize h-full text-[2.6rem] leading-snug pl-10">
           <div className="-mt-8">
             <h3>isolate music instruments</h3>
             <h3>with their music score</h3>
@@ -37,7 +37,7 @@ function Landing() {
         </div>
 
         {/* music listener img */}
-        <div className="self-center">
+        <div className="self-center -mt-8">
           <img src={musicImg} alt="" />
         </div>
       </div>
