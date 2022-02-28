@@ -10,7 +10,7 @@ function Body({ children }) {
         autoPlay
         loop
         muted
-        className="absolute -z-10 md:min-w-[210%] brightness-7 contrast-125 lg:min-w-[180%] xl:min-w-[160%] 2xl:min-w-[140%] min-h-full">
+        className="absolute -z-10 md:min-w-[210%] brightness-75 contrast-125 lg:min-w-[160%] xl:min-w-[140%] 2xl:min-w-[120%] min-h-full animate-bgFade">
         <source src={bgVideo} type="video/mp4" />
       </video>
       <div className="bg-white/20 bg-opacity- backdrop-blur-lg bg-clip-padding border-white/60 shadow-xl w-11/12 h-5/6 rounded-3xl text-slate-800 px-8 py-2">
