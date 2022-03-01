@@ -38,18 +38,6 @@ function Result(props) {
   let stringNote = "| ";
 
   const getNotation = () => {
-    // amtData.beat_times.forEach((beat) => {
-    //   amtData.notes.forEach((note) => {
-    //   });
-    // });
-
-    // console.log("started");
-    // console.log(amtData.notes[0].note);
-
-    // console.log(amtData.notes.length);
-    // console.log(amtData.beat_times[0].time);
-    // console.log(amtData.beat_times[1].time);
-
     let bar = 1;
     let barCount = 1;
 
@@ -119,39 +107,40 @@ function Result(props) {
     return stringNote;
   };
 
-  // const apostaphy = "F'";
+  const downloadNotationHandler = () => {
+    // eslint-disable-next-line prefer-const
+    let popup = window.open("", "Print", "height=800,width=600");
+    popup.document.write("<html><head><title>Notation</title></head><body>");
+    popup.document.write(document.getElementsById("result").innerHTML);
+    popup.document.write("</body></html>");
+    popup.document.close();
+    popup.focus();
 
-  // if (amtData) {
-  //   test1 = getNotation();
-  //   console.log("🚀 ~ file: Result.js ~ line 127 ~ Result ~ test1", test1);
-  //   // setNotation(test);
-  //   // console.log("🚀 ~ file: Result.js ~ line 40 ~ Result ~ amtData", amtData);
-  // } else {
-  //   console.log("first");
-  // }
+    popup.print();
+    popup.close();
+  };
 
   return (
     <div className="flex flex-col items-center justify-center h-[80%] gap-4">
-      {/* <h1>output</h1> */}
-
-      {/* <h1 className="result">{apostaphy}</h1> */}
       {amtData ? (
         <div className="h-96 overflow-y-scroll w-2/4 bg- p-4 rounded-md">
-          <pre className="result">{getNotation()}</pre>
+          <pre className="result" id="result">
+            {getNotation()}
+          </pre>
         </div>
       ) : (
         <div className="h-96 w-2/4 flex flex-col items-center justify-center">
           <img src={LoadIcon} className="animate-spin w-20" alt="" />
         </div>
       )}
-      {/* <button
+      <button
         type="button"
-        onClick={getNotation}
+        onClick={downloadNotationHandler}
         className={`w-44 text-white
         ${amtData ? "bg-blue-500 hover:shadow-blue-500/60" : "bg-gray-400"}
         shadow-lg font-semibold capitalize text-base px-4 py-2 mx-2 rounded-md`}>
-        Visualize Notation
-      </button> */}
+        Download Notation
+      </button>
 
       {/* MSS STEM RESULT   */}
       <audio src={url} controls />
