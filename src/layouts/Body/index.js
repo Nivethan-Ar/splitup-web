@@ -10,10 +10,10 @@ function Body({ children }) {
         autoPlay
         loop
         muted
-        className="absolute -z-10 md:min-w-[210%] brightness-75 contrast-125 lg:min-w-[160%] xl:min-w-[140%] 2xl:min-w-[120%] min-h-full animate-bgFade">
+        className="absolute opacity- -z-10 md:min-w-[210%] brightness-75 contrast-125 lg:min-w-[160%] xl:min-w-[140%] 2xl:min-w-[150%] min-h-full animate-bgFade">
         <source src={bgVideo} type="video/mp4" />
       </video>
-      <div className="bg-white/20 bg-opacity- backdrop-blur-lg bg-clip-padding border-white/60 shadow-xl w-11/12 h-5/6 rounded-3xl text-slate-800 px-8 py-2">
+      <div className="bg-white/20 bg-opacity- backdrop-blur-xl bg-clip-padding border-white/60 shadow-2xl w-11/12 h-5/6 rounded-3xl text-slate-800 px-8 py-2">
         <TopBar />
         {children}
       </div>

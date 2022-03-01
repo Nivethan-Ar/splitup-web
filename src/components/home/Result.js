@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-condition */
 /* eslint-disable no-plusplus */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
@@ -121,12 +122,12 @@ function Result(props) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-[80%] gap-4">
+    <div className="flex flex-col items-center justify-center h-[80%] gap-6 mt-6">
       {amtData ? (
         <div className="h-96 overflow-y-scroll w-2/4 bg- p-4 rounded-md">
-          <pre className="result" id="result">
+          <div className="result" id="result">
             {getNotation()}
-          </pre>
+          </div>
         </div>
       ) : (
         <div className="h-96 w-2/4 flex flex-col items-center justify-center">
@@ -142,8 +143,10 @@ function Result(props) {
         Download Notation
       </button>
 
-      {/* MSS STEM RESULT   */}
-      <audio src={url} controls />
+      <div className="">
+        {/* MSS STEM RESULT   */}
+        <audio src={url} controls />
+      </div>
 
       <button
         type="button"
