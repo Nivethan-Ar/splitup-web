@@ -122,7 +122,7 @@ function Result(props) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-[80%] gap-6 mt-6">
+    <div className="flex flex-col items-center justify-center h-[80%] gap-4 mt-6">
       {amtData ? (
         <div className="h-96 overflow-y-scroll w-[43%] bg- p-4 rounded-md">
           <div className="result " id="result">
