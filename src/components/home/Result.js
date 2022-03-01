@@ -124,8 +124,8 @@ function Result(props) {
   return (
     <div className="flex flex-col items-center justify-center h-[80%] gap-6 mt-6">
       {amtData ? (
-        <div className="h-96 overflow-y-scroll w-2/4 bg- p-4 rounded-md">
-          <div className="result" id="result">
+        <div className="h-96 overflow-y-scroll w-[43%] bg- p-4 rounded-md">
+          <div className="result " id="result">
             {getNotation()}
           </div>
         </div>
@@ -137,7 +137,7 @@ function Result(props) {
       <button
         type="button"
         onClick={downloadNotationHandler}
-        className={`w-44 text-white
+        className={`w-48 text-white
         ${amtData ? "bg-blue-500 hover:shadow-blue-500/60" : "bg-gray-400"}
         shadow-lg font-semibold capitalize text-base px-4 py-2 mx-2 rounded-md`}>
         Download Notation
