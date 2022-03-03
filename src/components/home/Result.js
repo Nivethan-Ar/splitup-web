@@ -112,7 +112,8 @@ function Result(props) {
     // eslint-disable-next-line prefer-const
     let popup = window.open("", "Print", "height=800,width=600");
     popup.document.write("<html><head><title>Notation</title></head><body>");
-    popup.document.write(document.getElementsById("result").innerHTML);
+    popup.document.write(document.getElementById("result").innerHTML);
+    // popup.document.write(document.("result").innerHTML);
     popup.document.write("</body></html>");
     popup.document.close();
     popup.focus();
